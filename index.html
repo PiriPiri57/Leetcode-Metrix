@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leetcode Metrix</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/LeetCode-OpenSource/vscode-leetcode/master/resources/LeetCode.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-700 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto max-w-lg bg-white/90 rounded-2xl shadow-2xl p-4 sm:p-8 w-full ">
+        <div class="header text-center mb-6 sm:mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-indigo-700 drop-shadow-lg">Leetcode Metrix</h1>
+        </div>
+        <div class="user-info mb-6 sm:mb-8">
+            <p class="text-base sm:text-lg font-medium text-gray-700 mb-2">Enter your Leetcode Username:</p>
+            <div class="flex flex-col sm:flex-row gap-2">
+                <input type="text" placeholder="Enter your Username" id="user-input" class="flex-1 px-3 py-2 sm:px-4 sm:py-2 rounded-lg border-2 border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition text-sm sm:text-base">
+                <button id="search-btn" class="bg-indigo-700 hover:bg-indigo-900 text-white font-semibold px-4 sm:px-6 py-2 rounded-lg shadow transition text-sm sm:text-base">Search</button>
+            </div>
+        </div>
+        <div class="stats space-y-4 sm:space-y-6">
+            <div class="progress grid grid-cols-2 sm:flex sm:flex-row justify-center gap-4">
+                <div class="progress-items flex flex-col items-center mb-2">
+                    <div class="easy-progress w-20 h-20 sm:w-24 sm:h-24 bg-green-100 rounded-full flex flex-col items-center justify-center shadow-lg transition-all duration-300 relative overflow-hidden">
+                        <span id="easy-level" class="text-green-600 font-bold text-xs sm:text-lg relative z-10">Easy</span>
+                        <span id="easy-percent" class="text-green-700 font-semibold text-xs sm:text-base relative z-10"></span>
+                    </div>
+                    <span id="easy-count" class="font-bold text-green-600 text-xs sm:text-base mt-2"></span>
+                </div>
+                <div class="progress-items flex flex-col items-center mb-2">
+                    <div class="medium-progress w-20 h-20 sm:w-24 sm:h-24 bg-yellow-100 rounded-full flex flex-col items-center justify-center shadow-lg transition-all duration-300 relative overflow-hidden">
+                        <span id="medium-level" class="text-yellow-600 font-bold text-xs sm:text-lg relative z-10">Medium</span>
+                        <span id="medium-percent" class="text-yellow-700 font-semibold text-xs sm:text-base relative z-10"></span>
+                    </div>
+                    <span id="medium-count" class="font-bold text-yellow-600 text-xs sm:text-base mt-2"></span>
+                </div>
+                <div class="progress-items flex flex-col items-center mb-2">
+                    <div class="hard-progress w-20 h-20 sm:w-24 sm:h-24 bg-red-100 rounded-full flex flex-col items-center justify-center shadow-lg transition-all duration-300 relative overflow-hidden">
+                        <span id="hard-level" class="text-red-600 font-bold text-xs sm:text-lg relative z-10">Hard</span>
+                        <span id="hard-percent" class="text-red-700 font-semibold text-xs sm:text-base relative z-10"></span>
+                    </div>
+                    <span id="hard-count" class="font-bold text-red-600 text-xs sm:text-base mt-2"></span>
+                </div>
+                <div class="progress-items flex flex-col items-center mb-2">
+                    <div class="total-progress w-20 h-20 sm:w-24 sm:h-24 bg-indigo-100 rounded-full flex flex-col items-center justify-center shadow-lg transition-all duration-300 relative overflow-hidden">
+                        <span id="total-level" class="text-indigo-700 font-bold text-xs sm:text-lg relative z-10">Total</span>
+                        <span id="total-percent" class="text-indigo-700 font-semibold text-xs sm:text-base relative z-10"></span>
+                    </div>
+                    <span id="total-count" class="font-bold text-indigo-700 text-xs sm:text-base mt-2"></span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded",function(){
 
     const searchButton = document.getElementById("search-btn")
     const usernameinput = document.getElementById("user-input")
-    const statsContainer = document.querySelector(".stats")
     const easyProgressCircle = document.querySelector(".easy-progress")
     const mediumProgressCircle = document.querySelector(".medium-progress")
     const hardProgressCircle = document.querySelector(".hard-progress")
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded",function(){
     const mediumLabel = document.getElementById("medium-level")
     const hardLabel = document.getElementById("hard-level")
     const totalLabel = document.getElementById("total-level")
-    const cardStatsContainer = document.querySelector(".stats-card")
     
     function updateProgress(solved, total, label, circle, percentLabel, color) {
         const progress = total > 0 ? Math.round((solved / total) * 100) : 0;
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded",function(){
             default: gradientColor = '#818cf8';
         }
         circle.style.background = `conic-gradient(${gradientColor} 0% ${progress}%, #f3f4f6 ${progress}% 100%)`;
-
 
     }
 
@@ -78,7 +75,6 @@ document.addEventListener("DOMContentLoaded",function(){
             if (parsedData.status==="error"){
                 throw new Error(parsedData.message)
             }
-            console.log("Logging data: ",parsedData)
             displayUserData(parsedData)
         }
         catch(error){
